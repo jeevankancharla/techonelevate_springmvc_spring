@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="add" class="com.tyss.springcore.StudentAddressInfo">
+		<property name="doorNo" value=" 89  "></property>
+		<property name="address" value=" gandhi nagar  "></property>
+		<property name="city" value=" kurnool  "></property>
+		<property name="state" value=" AP  "></property>
+		<property name="pincode" value=" 518 "></property>
+	</bean>
+
+	<bean id="Info" class="com.tyss.springcore.StudentInfo">
+		<property name="sid" value=" 9  "></property>
+		<property name="name" value=" Nayak  "></property>
+		<property name="email" value=" Nayak@gmail.com  "></property>
+		<property name="address" ref="add"></property>
+
+	</bean>
+
+
+
+
+	<bean id = "empadd" class ="com.tyss.springcore.EmployeeAddressInfo" >
+	<constructor-arg name ="doorNo" value = "14"></constructor-arg>
+	<constructor-arg name ="address" value = "14/13 Gandhi Nagar"></constructor-arg>
+	<constructor-arg name ="city" value = "KNL"></constructor-arg>
+	<constructor-arg name ="state" value = "AP"></constructor-arg>
+	<constructor-arg name ="pincode" value = "546"></constructor-arg>
+
+	</bean>
+	
+	
+	<bean id = "primary" class = "com.tyss.springcore.EmployeePrimaryInfo"   >
+	<constructor-arg name ="eid" value = "14"></constructor-arg>
+	<constructor-arg name ="name" value = "Rohit"></constructor-arg>
+	<constructor-arg name ="email" value = "rohit@gmail.com"></constructor-arg>
+	<constructor-arg name ="address" ref ="empadd"></constructor-arg> 
+	
+	
+	</bean>
+	
+</beans>
